@@ -1,0 +1,25 @@
+#spring.datasource.url=jdbc:postgresql://localhost:5432/ponomarev
+#spring.datasource.username=postgres
+#spring.datasource.password=123
+#
+#logging.level.org.hibernate.SQL=DEBUG
+#logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
+spring:
+  cloud:
+    zookeeper:
+      config:
+        enabled: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ponomarev
+    username: postgres
+    password: "123"
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/changelog.yml
+
+server:
+  port: 9090

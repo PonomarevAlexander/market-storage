@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+        id: DEV-1
+        author: bypon
+        changes:
+          - createTable:
+              tableName: foods
+              columns:
+                - column:
+                    name: id
+                    type: bigint
+                    constraints:
+                      primaryKey: true
+                      primaryKeyName: food_pk
+                      nullable: false
+                - column:
+                    name: name
+                    type: varchar(255)
+                    constraints:
+                      nullable: false
+                - column:
+                    name: expire_date
+                    type: timestamp
+                - column:
+                    name: description
+                    type: varchar(255)
+                - column:
+                    name: manufacturedDate
+                    type: timestamp
